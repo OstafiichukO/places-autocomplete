@@ -1,12 +1,19 @@
 import AddressPrediction from './AddressPrediction'
+import NameAutocomplete from './NameAutocompete'
 import Container from './UI/Container'
 
 export const App = () => {
 
   return (
-    <Container>
-      <AddressPrediction />
-    </Container>
+      <>
+        <Container>
+            <NameAutocomplete />
+        </Container>
+        <Container>
+            <AddressPrediction />
+        </Container>
+    </>
+    
   )
 }
 
