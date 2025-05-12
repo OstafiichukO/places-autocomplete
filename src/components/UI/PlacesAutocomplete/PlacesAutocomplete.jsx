@@ -16,7 +16,7 @@ const PlacesAutocomplete = ({ onAddressChange }) => {
 
     const handleOnPlacesChanged = () => {
         let address = inputRef.current.getPlaces()
-        onAddressChange(address[0].formatted_address)
+        onAddressChange(address[0].name)
     }
 
     return (
