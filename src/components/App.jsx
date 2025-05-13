@@ -8,7 +8,7 @@ export const App = () => {
     return (
         <>
             <Container>
-                <h3 style={{ 'margin': '0 0 16px 10px', }}>Names autocomplete from DB</h3>
+                <h3 style={{ 'margin': '0 0 16px 10px', }}>Names autocomplete from DB + OpenAI transliterate if name not found in DB</h3>
                 <NameAutocomplete />
             </Container>
             <Container>
