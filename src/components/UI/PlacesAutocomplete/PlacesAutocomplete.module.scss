@@ -1,3 +1,27 @@
+.places-autocomplete-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.places-autocomplete-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 20px);
+}
+
+.places-autocomplete-label {
+    font-size: 12px;
+    margin-left: 8px;
+    margin-bottom: -6px;
+    z-index: 100;
+    background-color: #fff;
+    width: max-content;
+    padding-inline: 4px;
+}
+
 .places-autocomplete {
     box-sizing: border-box;
     border: 1px solid transparent;
@@ -9,4 +33,25 @@
     font-size: 14px;
     outline: none;
     text-overflow: ellipsis;
+}
+
+.autocomplete-suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.autocomplete-suggestion {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border-radius: 4px;
+    padding: 12px;
+    background-color: #afcfbf;
+    cursor: pointer; 
+
+    &:focus,
+    &:hover {
+        background-color: #83ab97;;
+    }
 }

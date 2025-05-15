@@ -3,7 +3,32 @@ import NameAutocomplete from './NameAutocompete'
 import AddressAutocompete from './AddressAutocompete'
 import Container from './UI/Container'
 
+// import contacts from '../db/contacts.json';
+// import bigContacts from '../db/big-base-contacts.json';
+
+
 export const App = () => {
+
+    // const arSet = new Set(
+    //     bigContacts
+    //         .map(e => {
+    //             const first = (e['AR Name'] || '').trim();
+    //             const last = (e['AR Last Name'] || '').trim();
+    //             return (first + ' ' + last).trim();
+    //         })
+    //         .filter(full => full !== '')
+    // );
+
+    // const matchedCount = contacts.reduce(
+    //     (count, e) =>
+    //         arSet.has((e.arabicName || '').trim()) ? count + 1 : count,
+    //     0
+    // );
+    // console.log(
+    //     'Match percentage:',
+    //     (matchedCount / bigContacts.length * 100).toFixed(2) + '%'
+    // );
+    // console.log(`Matched contacts: ${matchedCount}`);
 
     return (
         <>

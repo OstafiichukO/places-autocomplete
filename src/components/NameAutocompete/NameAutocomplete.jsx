@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import debounce from 'lodash.debounce';
 
 import contacts from '../../db/contacts.json';
-import {transliterate_ar_to_en} from '../../services/openai.js'
+// import {transliterate_ar_to_en} from '../../services/openai.js'
 
 import cl from './NameAutocomplete.module.scss'
 
@@ -12,20 +12,20 @@ const NameAutocomplete = () => {
     const arabicNameInput = useRef(null)
     const englishNameInput = useRef(null)
 
-    const transliterate = async (arabicName) => {
-        const result = await transliterate_ar_to_en(arabicName)
-        return result
-    }
+    // const transliterate = async (arabicName) => {
+    //     const result = await transliterate_ar_to_en(arabicName)
+    //     return result
+    // }
     const debouncedSearch = useMemo(() => debounce(async (arabicName) => {
         if (!arabicName) setIndicator('neutral')
         let result = contacts.find(c => c.arabicName === arabicName);
         if (result) setIndicator('success')
         
-        if (!result && arabicName) {
-            const transliterated = await transliterate(arabicName);
-            result = { arabicName, englishName: transliterated };
-            setIndicator('warning')
-        }
+        // if (!result && arabicName) {
+        //     const transliterated = await transliterate(arabicName);
+        //     result = { arabicName, englishName: transliterated };
+        //     setIndicator('warning')
+        // }
 
         const resultsList = contacts.filter(c => c.arabicName.includes(arabicName))
         
